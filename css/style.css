@@ -1,0 +1,348 @@
+/************ général **********/
+*{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root{
+    --bg-grey: #f2f2f2;
+    --color-blue: #0065FC;
+    --mg-50 : 50px;
+    --size-carte : 290px;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a:visited{
+    color: black;
+}
+
+main, header{
+    margin: 0 var(--mg-50);
+}
+
+button{
+    cursor: pointer;
+}
+
+/********************************* version desktop **************************************/
+/********** header **********/
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 10vh;
+}
+
+.logo{
+    height: 10vh;
+}
+
+/********** nav **********/
+nav{
+    display: inline-block;
+}
+
+nav ul{
+    display: flex;
+    margin-top: 50px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: .75rem;
+    border-top: 2px solid transparent;
+    padding: 0 30px;
+}
+
+nav a:hover{
+    border-top: 2px solid var(--color-blue);
+    color:var(--color-blue) ;
+}
+
+/************** main *************/
+main h1,
+h2{
+    font-size: 1rem;
+}
+
+.sous_titre{
+    margin-top: -7px;
+    font-size: .8rem;
+}
+.info{
+    font-size: .8rem;
+}
+
+/************** formulaire *************/
+form{
+    display:flex;
+    flex-wrap: nowrap;
+    height: 35px;
+    margin-top: 20px;
+}
+
+#recherche .fa-location-dot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-grey);
+    width: 35px;
+    border-radius: 10px 0 0 10px;
+    font-size: .9rem;
+}
+
+#recherche input{
+    border: none;
+    border-top: 1px solid var(--bg-grey);
+    border-bottom: 1px solid var(--bg-grey);
+}
+
+#recherche input::placeholder{
+    font-weight: 600;
+    font-size: .75rem;
+    color: black;
+    padding: 10px;
+}
+
+#recherche button{
+    background-color: var(--color-blue);
+    border: none;
+    border-radius: 0 10px 10px 0;
+    color: white;
+    font-size: .75rem;
+    padding: 10px;
+}
+
+#recherche .fa-magnifying-glass{
+    display: none;
+}
+
+/************** info *************/
+.info{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.info i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    min-width: 15px;
+    font-size: 10px;
+    color: var(--color-blue);
+    border: 1px solid var(--bg-grey);
+    border-radius: 100%;
+}
+
+/************** activités *************/
+#activites{
+    margin: 40px 0;
+    width: 100%;
+}
+.activites{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.carte{
+    border: 1px solid var(--bg-grey);
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px var(--bg-grey);
+}
+
+.carte h3{
+    font-size: .7rem;
+    padding-left: 20px;
+}
+
+.grande_carte{
+    height: 423px;
+    width: 25%;
+}
+
+.grande_carte img{
+    height: 88%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+}
+
+.colonne_carte{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 22%;
+}
+
+
+.petite_carte{
+    height: 196px;
+    width: 100%;
+}
+
+.petite_carte img{
+    height: 75%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+}
+
+/************** footer *************/
+footer{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    background-color: var(--bg-grey);
+    padding: 30px 0 0 40px;
+}
+
+footer div{
+    width: 32%;
+}
+footer h3{
+    font-size: .9rem;
+    font-weight: 600;
+}
+footer h3, ul{
+    margin-left: 18px;
+    padding: 0;
+}
+
+footer li{
+    margin: 4px 0;
+}
+
+footer a{
+    font-size: .8rem;
+}
+
+
+/**************** version tablette *************/
+@media screen and (max-width: 768px) {
+    .grande_carte{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .colonne_carte{
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/**************** version mobile *************/
+@media screen and (max-width : 545px) {
+    header{
+        justify-content: center;
+        margin: 0;
+    }
+
+    .logo{
+        height: 8vh;
+    }
+
+    main{
+        margin: 0 20px;
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 2px solid var(--bg-grey);
+    }
+
+    nav ul,
+    nav a{
+        width: 100%;
+    }
+
+    nav li{
+        padding-bottom: 10px;
+    }
+
+    nav a:hover{
+        color: var(--color-blue);
+        border-top: none;
+        border-bottom: 2px solid var(--color-blue);
+    }
+
+    main h1{
+        margin-top: 30px;
+    }
+
+    form{
+        justify-content: center;
+    }
+    
+    #recherche input{
+        width: 60%;
+    }
+
+    #recherche button span{
+        display: none;
+    }
+
+    #recherche .fa-magnifying-glass{
+        display: block;
+    }
+
+    #activites{
+        margin-bottom: 0;
+    }
+
+    #activites h2{
+        margin-bottom: 25px;
+    }
+
+    .carte{
+        width: 100%;
+        height: 44%;
+    }
+
+    .activites img{
+        width: 100%;
+    }
+
+    .colonne_carte{
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .petite_carte{
+        margin: 10px 0;
+    }
+
+    .grande_carte{
+        margin: -10px 0;
+    }
+
+    footer{
+        padding: 0;
+        flex-direction: column;
+    }
+
+    footer div{
+        width: 100%;
+    }
+    
+}
