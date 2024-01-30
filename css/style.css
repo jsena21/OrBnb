@@ -320,6 +320,10 @@ footer a{
         height: 44%;
     }
 
+    .carte h3{
+        padding-bottom: 5px;
+    }
+
     .activites img{
         width: 100%;
     }
@@ -334,8 +338,16 @@ footer a{
         margin: 10px 0;
     }
 
+    .petite_carte img{
+        height: 85%;
+    }
+
     .grande_carte{
         margin: -10px 0;
+    }
+
+    .grande_carte img{
+        height: 85%;
     }
 
     footer{
