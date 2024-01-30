@@ -63,6 +63,7 @@ nav a{
     font-size: .75rem;
     border-top: 2px solid transparent;
     padding: 0 30px;
+    color: black;
 }
 
 nav a:hover{
